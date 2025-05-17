@@ -1,8 +1,14 @@
 import { Container } from './styles'
 
-const Card = () => (
+type Props = {
+  children: JSX.Element
+  title: string
+}
+
+const Card = ({ children, title }: Props) => (
   <Container>
-    <h2>nome do card</h2>
+    <h2>{title}</h2>
+    {children}
   </Container>
 )
 
